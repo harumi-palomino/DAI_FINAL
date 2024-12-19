@@ -1,0 +1,72 @@
+﻿@model PRY_Taglitore.Models.Ordenes
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>¿Desea usted eliminar la lista?</h3>
+<div>
+    <h4>Ordenes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OrdenID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrdenID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mesa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mesa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mesero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mesero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.platillo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.platillo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidad)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+            @Html.ActionLink("Regresar a la lista", "Index")
+        </div>
+    }
+</div>

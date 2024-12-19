@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TagliatoreDBModelStoreContainer" CdmEntityContainer="DbModels">
+    <EntitySetMapping Name="Ordenes">
+      <EntityTypeMapping TypeName="TagliatoreDBModel.Ordenes">
+        <MappingFragment StoreEntitySet="Ordenes">
+          <ScalarProperty Name="OrdenID" ColumnName="OrdenID" />
+          <ScalarProperty Name="Mesa" ColumnName="Mesa" />
+          <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+          <ScalarProperty Name="Mesero" ColumnName="Mesero" />
+          <ScalarProperty Name="platillo" ColumnName="platillo" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="TagliatoreDBModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="contrasena" ColumnName="contrasena" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

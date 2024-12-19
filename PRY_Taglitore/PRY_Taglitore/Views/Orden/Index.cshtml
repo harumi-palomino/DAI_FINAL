@@ -1,0 +1,63 @@
+﻿@model IEnumerable<PRY_Taglitore.Models.Ordenes>
+
+@{
+    ViewBag.Title = "Ordenes";
+}
+
+<h2>Ordenes</h2>
+
+<p>
+    @Html.ActionLink("Registrar orden", "Create","",  new { @class = "btn btn-success" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OrdenID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mesa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mesero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.platillo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cantidad)
+        </th>
+        <th>Acciones</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrdenID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mesa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mesero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.platillo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cantidad)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.OrdenID}, new {@class = "btn btn-warning"}) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.OrdenID }, new { @class = "btn btn-primary" }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.OrdenID }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>
